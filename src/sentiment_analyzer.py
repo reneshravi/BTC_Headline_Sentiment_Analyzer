@@ -7,11 +7,17 @@ Created by: Renesh Ravi
 import os
 import pandas as pd
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-import nltk
 
 
-
-def score_sentiment(input, output):
+def vader_sentiment_scorer(input, output):
+    """
+    vader_sentiment_scorer takes in an input of headlines and performs and
+    sentiment analysis using VADER on the headlines and returns the results in a csv
+    with the headlines and other information
+    :param input: input csv file containing headlines
+    :param output: output csv file containing headlines and sentiment score
+    :return: pandas dataframe containing the headlines and their respective sentiment score
+    """
     df = pd.read_csv(input, parse_dates=['timestamp'])
 
     lexicon_path = os.path.join(os.path.dirname(__file__),

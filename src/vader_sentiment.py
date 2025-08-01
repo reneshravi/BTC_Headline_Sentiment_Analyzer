@@ -1,6 +1,6 @@
 """
 File: sentiment_analyzer.py
-Description: Utilizes VADER to score headlines for sentiment
+Description: Utilizes VADER to score headlines for sentiment analysis
 Created by: Renesh Ravi
 """
 

@@ -41,4 +41,4 @@ if __name__ == "__main__":
     output = os.path.join(os.path.dirname(__file__),
                          "../data/btc_headlines_sentiment.csv")
 
-    score_sentiment(input, output)
+    vader_sentiment_scorer(input, output)

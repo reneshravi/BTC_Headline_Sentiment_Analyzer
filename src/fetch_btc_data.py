@@ -1,10 +1,11 @@
 """
 File: fetch_btc_data.py
-Description:
+Description: contains function fetch_btc_data to generate a csv containing
+the last 2000 hours of BTC OHLCV data.
 Created by: Renesh Ravi
 """
-import os
 
+import os
 import requests
 import pandas as pd
 

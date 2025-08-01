@@ -11,12 +11,11 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 def vader_sentiment_scorer(input, output):
     """
-    vader_sentiment_scorer takes in an input of headlines and performs and
-    sentiment analysis using VADER on the headlines and returns the results in a csv
-    with the headlines and other information
-    :param input: input csv file containing headlines
-    :param output: output csv file containing headlines and sentiment score
-    :return: pandas dataframe containing the headlines and their respective sentiment score
+    Applies VADER sentiment classification to headlines and saves the results.
+    :param input: Path to the input CSV file containing columns ['timestamp', 'headline'].
+    :param output: Path where the output CSV with sentiment labels will be saved.
+    :return: DataFrame containing the original data with an additional column:
+            - 'compound_score': The VADER compound sentiment score for each headline (float between -1 and 1).
     """
     df = pd.read_csv(input, parse_dates=['timestamp'])
 
